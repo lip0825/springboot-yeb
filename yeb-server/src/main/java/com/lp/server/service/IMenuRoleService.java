@@ -3,6 +3,7 @@ package com.lp.server.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.lp.server.entity.MenuRole;
+import com.lp.server.entity.RespBean;
 
 /**
  * <p>
@@ -14,4 +15,5 @@ import com.lp.server.entity.MenuRole;
  */
 public interface IMenuRoleService extends IService<MenuRole> {
 
+    RespBean updateMenuRole(Integer rid,Integer[] mids);
 }
