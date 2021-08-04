@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="efc0f86e-01c8-44aa-8bc8-d1beef275cdd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/lp/server/mapper/MenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/lp/server/mapper/MenuMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/lp/server/mapper/MenuRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/lp/server/mapper/MenuRoleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/lp/server/service/IMenuRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/lp/server/service/IMenuRoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/lp/server/service/IMenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/lp/server/service/IMenuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/lp/server/service/impl/MenuRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/lp/server/service/impl/MenuRoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/lp/server/service/impl/MenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/lp/server/service/impl/MenuServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MenuMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MenuRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MenuRoleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/lp/server/service/impl/MenuRoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/lp/server/service/impl/MenuRoleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/lp/server/service/impl/MenuServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/lp/server/service/impl/MenuServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +143,7 @@
       <workItem from="1627717871211" duration="5901000" />
       <workItem from="1627790828678" duration="7607000" />
       <workItem from="1627878724310" duration="9584000" />
-      <workItem from="1627975041647" duration="8118000" />
+      <workItem from="1627975041647" duration="8497000" />
     </task>
     <servers />
   </component>
