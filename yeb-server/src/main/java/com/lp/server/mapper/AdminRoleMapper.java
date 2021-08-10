@@ -3,6 +3,7 @@ package com.lp.server.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.lp.server.entity.AdminRole;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * <p>
@@ -14,4 +15,5 @@ import com.lp.server.entity.AdminRole;
  */
 public interface AdminRoleMapper extends BaseMapper<AdminRole> {
 
+    Integer addAdminRole(@Param("adminId") Integer adminId, @Param("rids") Integer[] rids);
 }

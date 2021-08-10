@@ -35,4 +35,8 @@ public interface IAdminService extends IService<Admin> {
      * @return
      */
     List<Role> getRoles(Integer adminId);
+
+    List<Admin> getAdminByKey(String keywords);
+
+    RespBean updateAdminRole(Integer adminId, Integer[] rids);
 }

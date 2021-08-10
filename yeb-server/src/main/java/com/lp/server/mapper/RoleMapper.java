@@ -2,8 +2,10 @@ package com.lp.server.mapper;
 
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.lp.server.entity.RespBean;
 import com.lp.server.entity.Role;
 import io.swagger.models.auth.In;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -22,4 +24,5 @@ public interface RoleMapper extends BaseMapper<Role> {
      * @return
      */
     List<Role> getRoles(Integer adminId);
+
 }

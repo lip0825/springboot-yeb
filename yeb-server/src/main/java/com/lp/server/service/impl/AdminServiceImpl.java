@@ -3,12 +3,15 @@ package com.lp.server.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.lp.server.config.security.JwtTokenUtil;
 import com.lp.server.entity.Admin;
+import com.lp.server.entity.AdminRole;
 import com.lp.server.entity.RespBean;
 import com.lp.server.entity.Role;
 import com.lp.server.mapper.AdminMapper;
+import com.lp.server.mapper.AdminRoleMapper;
 import com.lp.server.mapper.RoleMapper;
 import com.lp.server.service.IAdminService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.lp.server.utils.AdminUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -18,6 +21,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
@@ -42,12 +46,16 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     private PasswordEncoder passwordEncoder;
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
+    @Autowired
+    private AdminUtils adminUtils;
     @Value("${jwt.tokenHead}")
     private String tokenHead;
     @Autowired
     private AdminMapper adminMapper;
     @Autowired
     private RoleMapper roleMapper;
+    @Autowired
+    private AdminRoleMapper adminRoleMapper;
     /**
      * 登录之后返回token
      * @param username
@@ -95,5 +103,30 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     @Override
     public List<Role> getRoles(Integer adminId) {
         return roleMapper.getRoles(adminId);
+    }
+
+    /**
+     * 根据关键词获取全部管理员
+     * @param keywords
+     * @return
+     */
+    @Override
+    public List<Admin> getAdminByKey(String keywords) {
+        Integer id = adminUtils.getLoginAdmin().getId();
+        return adminMapper.getAdminByKey(id,keywords);
+    }
+
+    @Override
+    @Transactional
+    public RespBean updateAdminRole(Integer adminId, Integer[] rids) {
+        adminRoleMapper.delete(new QueryWrapper<AdminRole>().eq("adminId",adminId));
+        if (rids == null || rids.length == 0){
+            return RespBean.success("更新成功");
+        }
+        Integer result = adminRoleMapper.addAdminRole(adminId,rids);
+        if (result == rids.length){
+            return RespBean.success("更新成功");
+        }
+        return RespBean.error("更新失败");
     }
 }
